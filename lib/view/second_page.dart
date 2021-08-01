@@ -21,13 +21,6 @@ class SecondPage extends StatelessWidget {
       return book.categories.contains(id);
     }).toList();
 
-    nature = Nature.hard;
-    if (nature) {
-      natureOutput = 'Hard News';
-    } else {
-      natureOutput = 'Soft News';
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
