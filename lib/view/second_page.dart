@@ -1,18 +1,31 @@
-import 'package:better_flutter_chapter_seven/model/news.dart';
 import 'package:flutter/material.dart';
 import '../model/dummy_news.dart';
+import '../model/news.dart';
 
 class SecondPage extends StatelessWidget {
-  const SecondPage({
-    Key? key,
-    required this.title,
-    required this.color,
-    required this.id,
-  }) : super(key: key);
-
+  final int id;
   final String title;
   final Color color;
-  final int id;
+  final Nature nature;
+
+  const SecondPage({
+    Key? key,
+    required this.id,
+    required this.title,
+    required this.color,
+    required this.nature,
+  }) : super(key: key);
+
+  String get natureText {
+    switch (nature) {
+      case Nature.hard:
+        return 'Event based Latest Hard News >>';
+      case Nature.soft:
+        return 'Take time and read Soft News Story >>';
+      default:
+        return 'Unknown';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +33,7 @@ class SecondPage extends StatelessWidget {
     final id = arguments['id'];
     final title = arguments['title'];
     final color = arguments['color'];
-    final categoryBooks = DUMMY_NEWS.where((book) {
+    final categoryBooks = dummyNews.where((book) {
       return book.categories.contains(id);
     }).toList();
 
@@ -33,6 +46,19 @@ class SecondPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return Column(
             children: [
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  natureText,
+                  style: const TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 5.0,
+              ),
               Stack(
                 children: [
                   Container(

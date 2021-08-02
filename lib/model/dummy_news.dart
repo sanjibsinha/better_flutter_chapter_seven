@@ -1,6 +1,6 @@
 import 'news.dart';
 
-const DUMMY_NEWS = const [
+const dummyNews = [
   News(
     id: 'b1',
     categories: ['c1', 'c4'],
@@ -17,7 +17,7 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/07/Can-you-code-in-WordPress-How-do-I-learn-WordPress-coding-.jpg',
+        'https://cdn.pixabay.com/photo/2021/07/12/19/43/swans-6421355_960_720.jpg',
     nature: Nature.hard,
   ),
   News(
@@ -36,7 +36,7 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/06/What-is-toList-flutter-What-is-map-in-Dart-.jpg',
+        'https://cdn.pixabay.com/photo/2020/05/15/14/03/lake-5173683_960_720.jpg',
     nature: Nature.soft,
   ),
   News(
@@ -55,7 +55,7 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/characters-packagae-flutter.jpg',
+        'https://cdn.pixabay.com/photo/2021/07/26/22/04/sea-shell-6495338_960_720.jpg',
     nature: Nature.hard,
   ),
   News(
@@ -74,7 +74,7 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/characters-packagae-flutter.jpg',
+        'https://cdn.pixabay.com/photo/2021/07/12/19/43/swans-6421355_960_720.jpg',
     nature: Nature.soft,
   ),
   News(
@@ -93,7 +93,7 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/data-type-php.jpg',
+        'https://cdn.pixabay.com/photo/2019/06/22/18/31/love-4292211_960_720.jpg',
     nature: Nature.hard,
   ),
   News(
@@ -112,7 +112,7 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/associative-array-in-php.jpg',
+        'https://cdn.pixabay.com/photo/2019/09/20/20/13/sea-4492536_960_720.jpg',
     nature: Nature.soft,
   ),
 ];

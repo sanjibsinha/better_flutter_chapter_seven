@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../controller/all_categories.dart';
 import '../model/dummy_category.dart';
+import '../model/news.dart';
 import 'second_page.dart';
 
 class FirstPage extends StatelessWidget {
@@ -18,6 +19,7 @@ class FirstPage extends StatelessWidget {
               id: 1,
               title: 'Title',
               color: Colors.blue,
+              nature: Nature.hard,
             ),
       },
     );
