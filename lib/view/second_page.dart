@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import '../model/dummy_news.dart';
 
 class SecondPage extends StatelessWidget {
-  SecondPage({Key? key}) : super(key: key);
+  const SecondPage({
+    Key? key,
+    required this.title,
+    required this.color,
+    required this.id,
+  }) : super(key: key);
 
-  var title;
-  var color;
-  var id;
-  var nature;
-  var natureOutput;
+  final String title;
+  final Color color;
+  final int id;
 
   @override
   Widget build(BuildContext context) {

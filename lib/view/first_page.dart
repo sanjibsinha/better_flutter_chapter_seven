@@ -14,7 +14,11 @@ class FirstPage extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const FirstPageBody(),
-        '/categories': (context) => SecondPage(),
+        '/categories': (context) => const SecondPage(
+              id: 1,
+              title: 'Title',
+              color: Colors.blue,
+            ),
       },
     );
   }
