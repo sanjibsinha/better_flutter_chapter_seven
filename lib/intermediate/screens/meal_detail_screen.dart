@@ -1,10 +1,10 @@
 import 'package:better_flutter_chapter_seven/intermediate/dummy_data.dart';
 import 'package:flutter/material.dart';
 
-class MealDetailScreen extends StatelessWidget {
+class NewsDetailScreen extends StatelessWidget {
   static const routeName = '/news-detail';
 
-  const MealDetailScreen({Key? key}) : super(key: key);
+  const NewsDetailScreen({Key? key}) : super(key: key);
 
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(

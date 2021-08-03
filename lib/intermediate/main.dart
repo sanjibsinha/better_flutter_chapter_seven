@@ -4,13 +4,15 @@ import './screens/meal_detail_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/categories_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DeliMeals',
+      title: 'Latest News',
       theme: ThemeData(
         primarySwatch: Colors.pink,
         primaryColor: Colors.amber,
@@ -32,22 +34,14 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       initialRoute: '/', // default is '/'
       routes: {
-        '/': (ctx) => CategoriesScreen(),
-        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
-        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        '/': (ctx) => const CategoriesScreen(),
+        CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
+        NewsDetailScreen.routeName: (ctx) => const NewsDetailScreen(),
       },
-      onGenerateRoute: (settings) {
-        print(settings.arguments);
-        // if (settings.name == '/meal-detail') {
-        //   return ...;
-        // } else if (settings.name == '/something-else') {
-        //   return ...;
-        // }
-        // return MaterialPageRoute(builder: (ctx) => CategoriesScreen(),);
-      },
+
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
-          builder: (ctx) => CategoriesScreen(),
+          builder: (ctx) => const CategoriesScreen(),
         );
       },
     );

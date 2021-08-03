@@ -128,8 +128,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/', // default is '/'
       routes: {
         '/': (ctx) => const CategoriesScreen(),
-        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
-        MealDetailScreen.routeName: (ctx) => const MealDetailScreen(),
+        CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
+        NewsDetailScreen.routeName: (ctx) => const NewsDetailScreen(),
       },
       onGenerateRoute: (settings) {
         //print(settings.arguments);

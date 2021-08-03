@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../screens/meal_detail_screen.dart';
 
-class MealItem extends StatelessWidget {
+class NewsItem extends StatelessWidget {
   final String id;
   final String title;
   final String imageUrl;
   final Nature nature;
 
-  const MealItem({
+  const NewsItem({
     required this.id,
     required this.title,
     required this.imageUrl,
@@ -29,7 +29,7 @@ class MealItem extends StatelessWidget {
 
   void selectMeal(BuildContext context) {
     Navigator.of(context).pushNamed(
-      MealDetailScreen.routeName,
+      NewsDetailScreen.routeName,
       arguments: id,
     );
   }
