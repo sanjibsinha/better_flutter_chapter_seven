@@ -1,35 +1,37 @@
-import 'package:better_flutter_chapter_seven/model/news.dart';
 import 'package:flutter/material.dart';
+import '../model/news.dart';
+import '../view/second_page.dart';
 
-import '../screens/meal_detail_screen.dart';
-
-class MealItem extends StatelessWidget {
+class NewsItem extends StatelessWidget {
   final String id;
   final String title;
-  final String imageUrl;
+  final String detail;
+  final String imageURL;
   final Nature nature;
 
-  const MealItem({
+  const NewsItem({
+    Key? key,
     required this.id,
     required this.title,
-    required this.imageUrl,
+    required this.detail,
+    required this.imageURL,
     required this.nature,
-  });
+  }) : super(key: key);
 
   String get natureText {
     switch (nature) {
       case Nature.hard:
-        return 'Event Based Hard News';
+        return 'Event based Latest Hard News >>';
       case Nature.soft:
-        return 'Soft News to Read Later';
+        return 'Take time and read Soft News Story >>';
       default:
         return 'Unknown';
     }
   }
 
-  void selectMeal(BuildContext context) {
+  void selectNews(BuildContext context) {
     Navigator.of(context).pushNamed(
-      MealDetailScreen.routeName,
+      SecondPage.routeName,
       arguments: id,
     );
   }
@@ -37,7 +39,7 @@ class MealItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => selectMeal(context),
+      onTap: () => selectNews(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -54,7 +56,7 @@ class MealItem extends StatelessWidget {
                     topRight: Radius.circular(15),
                   ),
                   child: Image.network(
-                    imageUrl,
+                    imageURL,
                     height: 250,
                     width: double.infinity,
                     fit: BoxFit.cover,
@@ -80,7 +82,28 @@ class MealItem extends StatelessWidget {
                       overflow: TextOverflow.fade,
                     ),
                   ),
-                )
+                ),
+                Positioned(
+                  bottom: 20,
+                  right: 10,
+                  child: Container(
+                    width: 300,
+                    color: Colors.black54,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5,
+                      horizontal: 20,
+                    ),
+                    child: Text(
+                      detail,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
+                      softWrap: true,
+                      overflow: TextOverflow.fade,
+                    ),
+                  ),
+                ),
               ],
             ),
             Padding(
@@ -91,7 +114,7 @@ class MealItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       const Icon(
-                        Icons.work,
+                        Icons.schedule,
                       ),
                       const SizedBox(
                         width: 6,

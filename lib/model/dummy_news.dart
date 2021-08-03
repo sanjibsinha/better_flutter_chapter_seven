@@ -3,7 +3,10 @@ import 'news.dart';
 const dummyNews = [
   News(
     id: 'b1',
-    categories: ['c1', 'c4'],
+    categories: [
+      'c1',
+      'c4',
+    ],
     title: 'Global Worming fuels disaster',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -22,7 +25,10 @@ const dummyNews = [
   ),
   News(
     id: 'b2',
-    categories: ['c2', 'c3'],
+    categories: [
+      'c2',
+      'c3',
+    ],
     title: 'What a brief jog can do to your brain',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -41,7 +47,10 @@ const dummyNews = [
   ),
   News(
     id: 'b3',
-    categories: ['c7', 'c6'],
+    categories: [
+      'c7',
+      'c6',
+    ],
     title: 'Ten tips that will stay you fit',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -60,7 +69,10 @@ const dummyNews = [
   ),
   News(
     id: 'b4',
-    categories: ['c8', 'c10'],
+    categories: [
+      'c8',
+      'c10',
+    ],
     title: 'Health tips for the older guys',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -79,7 +91,10 @@ const dummyNews = [
   ),
   News(
     id: 'b5',
-    categories: ['c1', 'c5'],
+    categories: [
+      'c1',
+      'c5',
+    ],
     title: 'Take more outdoor walks',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -98,7 +113,9 @@ const dummyNews = [
   ),
   News(
     id: 'b6',
-    categories: ['c9'],
+    categories: [
+      'c9',
+    ],
     title: 'New hair style and no heels',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 

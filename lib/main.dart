@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
+/* import 'package:flutter/material.dart';
 import 'view/first_page.dart';
 
 void main() {
   // runApp(const MyApp());
   runApp(const FirstPage());
-}
-
+} */
 /*
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -90,9 +89,9 @@ class SecondPage extends StatelessWidget {
     );
   }
 }
+
 */
 
-/*
 import 'package:better_flutter_chapter_seven/intermediate/screens/categories_screen.dart';
 import 'package:better_flutter_chapter_seven/intermediate/screens/category_meals_screen.dart';
 import 'package:better_flutter_chapter_seven/intermediate/screens/meal_detail_screen.dart';
@@ -149,4 +148,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-*/

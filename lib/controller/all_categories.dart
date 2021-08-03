@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../view/first_page.dart';
 
 class AllCategories extends StatelessWidget {
   final String id;
@@ -12,9 +13,8 @@ class AllCategories extends StatelessWidget {
   }) : super(key: key);
 
   void selectCategory(BuildContext context) {
-    Navigator.pushNamed(
-      context,
-      '/categories',
+    Navigator.of(context).pushNamed(
+      FirstPageBody.routeName,
       arguments: {
         'id': id,
         'title': title,
@@ -29,6 +29,8 @@ class AllCategories extends StatelessWidget {
       onTap: () {
         selectCategory(context);
       },
+      splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(15),
       child: Container(
         alignment: Alignment.center,
         padding: const EdgeInsets.all(
@@ -49,7 +51,7 @@ class AllCategories extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
           ),
