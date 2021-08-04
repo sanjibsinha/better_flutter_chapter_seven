@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/meal_item.dart';
 import '../dummy_data.dart';
+import '../controllers/news_item.dart';
 
-class CategoryMealsScreen extends StatelessWidget {
+class CategoryNewsScreen extends StatelessWidget {
   static const routeName = '/category-news';
 
-  const CategoryMealsScreen({Key? key}) : super(key: key);
+  const CategoryNewsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +13,8 @@ class CategoryMealsScreen extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as Map<String, String>;
     final categoryTitle = routeArgs['title'];
     final categoryId = routeArgs['id'];
-    final categoryNews = dummyNews.where((meal) {
-      return meal.categories.contains(categoryId);
+    final categoryNews = dummyNews.where((news) {
+      return news.categories.contains(categoryId);
     }).toList();
     return Scaffold(
       appBar: AppBar(

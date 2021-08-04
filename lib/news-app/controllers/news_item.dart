@@ -1,7 +1,6 @@
-import 'package:better_flutter_chapter_seven/model/news.dart';
 import 'package:flutter/material.dart';
-
-import '../screens/meal_detail_screen.dart';
+import '../models/news.dart';
+import '../views/news_detail_screen.dart';
 
 class NewsItem extends StatelessWidget {
   final String id;

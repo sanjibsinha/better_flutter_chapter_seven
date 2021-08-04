@@ -1,5 +1,5 @@
-import 'package:better_flutter_chapter_seven/intermediate/dummy_data.dart';
 import 'package:flutter/material.dart';
+import '../dummy_data.dart';
 
 class NewsDetailScreen extends StatelessWidget {
   static const routeName = '/news-detail';

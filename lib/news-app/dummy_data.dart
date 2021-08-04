@@ -1,8 +1,8 @@
-import 'package:better_flutter_chapter_seven/model/category.dart';
-import 'package:better_flutter_chapter_seven/model/news.dart';
 import 'package:flutter/material.dart';
+import 'models/category.dart';
+import 'models/news.dart';
 
-const DUMMY_CATEGORIES = [
+const dummyCategories = [
   Category(
     id: 'c1',
     title: 'Health',
