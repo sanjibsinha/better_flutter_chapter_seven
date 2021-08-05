@@ -1,29 +1,27 @@
 import 'package:flutter/material.dart';
 import '../model/news.dart';
-import '../view/second_page.dart';
+import '../views/news_detail_screen.dart';
 
 class NewsItem extends StatelessWidget {
   final String id;
   final String title;
-  final String detail;
-  final String imageURL;
+  final String imageUrl;
   final Nature nature;
 
   const NewsItem({
     Key? key,
     required this.id,
     required this.title,
-    required this.detail,
-    required this.imageURL,
+    required this.imageUrl,
     required this.nature,
   }) : super(key: key);
 
   String get natureText {
     switch (nature) {
       case Nature.hard:
-        return 'Event based Latest Hard News >>';
+        return 'Event Based Hard News';
       case Nature.soft:
-        return 'Take time and read Soft News Story >>';
+        return 'Soft News to Read Later';
       default:
         return 'Unknown';
     }
@@ -31,7 +29,7 @@ class NewsItem extends StatelessWidget {
 
   void selectNews(BuildContext context) {
     Navigator.of(context).pushNamed(
-      SecondPage.routeName,
+      NewsDetailScreen.routeName,
       arguments: id,
     );
   }
@@ -56,7 +54,7 @@ class NewsItem extends StatelessWidget {
                     topRight: Radius.circular(15),
                   ),
                   child: Image.network(
-                    imageURL,
+                    imageUrl,
                     height: 250,
                     width: double.infinity,
                     fit: BoxFit.cover,
@@ -82,28 +80,7 @@ class NewsItem extends StatelessWidget {
                       overflow: TextOverflow.fade,
                     ),
                   ),
-                ),
-                Positioned(
-                  bottom: 20,
-                  right: 10,
-                  child: Container(
-                    width: 300,
-                    color: Colors.black54,
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 5,
-                      horizontal: 20,
-                    ),
-                    child: Text(
-                      detail,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                      softWrap: true,
-                      overflow: TextOverflow.fade,
-                    ),
-                  ),
-                ),
+                )
               ],
             ),
             Padding(
@@ -114,7 +91,7 @@ class NewsItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       const Icon(
-                        Icons.schedule,
+                        Icons.work,
                       ),
                       const SizedBox(
                         width: 6,

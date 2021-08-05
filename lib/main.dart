@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import '../news-app/views/categories_screen.dart';
-import '../news-app/views/category_news_screen.dart';
-import '../news-app/views/news_detail_screen.dart';
+// import '../news-app/views/categories_screen.dart';
+// import '../news-app/views/category_news_screen.dart';
+// import '../news-app/views/news_detail_screen.dart';
+import '../views/categories_screen.dart';
 
-void main() => runApp(const MyApp());
+// void main() => runApp(const MyApp());
+void main() => runApp(const NewsApp());
 
+/*
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -44,6 +47,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+*/
 
 
 /* import 'package:flutter/material.dart';
