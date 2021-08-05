@@ -26,7 +26,7 @@ class NewsItem extends StatelessWidget {
     }
   }
 
-  void selectMeal(BuildContext context) {
+  void selectNews(BuildContext context) {
     Navigator.of(context).pushNamed(
       NewsDetailScreen.routeName,
       arguments: id,
@@ -36,7 +36,7 @@ class NewsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => selectMeal(context),
+      onTap: () => selectNews(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),

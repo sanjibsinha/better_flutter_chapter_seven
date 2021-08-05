@@ -34,10 +34,10 @@ class NewsDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mealId = ModalRoute.of(context)!.settings.arguments as String;
-    final selectedMeal = dummyNews.firstWhere((meal) => meal.id == mealId);
+    final selectedNews = dummyNews.firstWhere((meal) => meal.id == mealId);
     return Scaffold(
       appBar: AppBar(
-        title: Text(selectedMeal.title),
+        title: Text(selectedNews.title),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -46,12 +46,12 @@ class NewsDetailScreen extends StatelessWidget {
               height: 300,
               width: double.infinity,
               child: Image.network(
-                selectedMeal.imageURL,
+                selectedNews.imageURL,
                 fit: BoxFit.cover,
               ),
             ),
             buildSectionTitle(context, 'News Detail'),
-            Text(selectedMeal.detail),
+            Text(selectedNews.detail),
           ],
         ),
       ),
