@@ -11,24 +11,23 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DeliMeals',
+      title: 'Daily News',
       theme: ThemeData(
         primarySwatch: Colors.pink,
         primaryColor: Colors.amber,
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
-        fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
-            bodyText2: const TextStyle(
-              color: Color.fromRGBO(20, 51, 51, 1),
+              bodyText2: const TextStyle(
+                color: Color.fromRGBO(20, 51, 51, 1),
+              ),
+              bodyText1: const TextStyle(
+                color: Color.fromRGBO(20, 51, 51, 1),
+              ),
+              headline6: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            bodyText1: const TextStyle(
-              color: Color.fromRGBO(20, 51, 51, 1),
-            ),
-            headline6: const TextStyle(
-              fontSize: 20,
-              fontFamily: 'RobotoCondensed',
-              fontWeight: FontWeight.bold,
-            )),
       ),
       // home: CategoriesScreen(),
       initialRoute: '/', // default is '/'
@@ -54,7 +53,7 @@ class FirstPageFirstBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('First Page'),
+        title: const Text('Headlines Today'),
       ),
       body: GridView(
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -62,7 +61,7 @@ class FirstPageFirstBody extends StatelessWidget {
           crossAxisSpacing: 20.0,
           mainAxisSpacing: 20.0,
         ),
-        children: DUMMY_CATEGORIES.map(
+        children: dummyCategories.map(
           (e) {
             return AllCategories(
               id: e.id,
