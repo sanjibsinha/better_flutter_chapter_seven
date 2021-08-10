@@ -35,6 +35,14 @@ class NewsApp extends StatelessWidget {
         NewsDetailScreen.routeName: (ctx) => const NewsDetailScreen(),
       },
 
+      /// onGenerateRoute works as a fallback if any navigation fails
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => const CategoriesScreen());
+      },
+
+      /// if onGenerateRoute isn't dfined as a fallback onUnknownRoute
+      /// takes its place and works fine if any navigation fails
+
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
           builder: (ctx) => const CategoriesScreen(),
