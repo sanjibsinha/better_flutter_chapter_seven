@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../controllers/category_item.dart';
 import '../model/dummy_data.dart';
+import 'tabs_view.dart';
 import 'category_news_screen.dart';
 import 'news_detail_screen.dart';
 
@@ -30,7 +31,7 @@ class NewsApp extends StatelessWidget {
       // home: CategoriesScreen(),
       initialRoute: '/', // default is '/'
       routes: {
-        '/': (ctx) => const CategoriesScreen(),
+        '/': (ctx) => const TabsView(),
         CategoryNewsScreen.routeName: (ctx) => const CategoryNewsScreen(),
         NewsDetailScreen.routeName: (ctx) => const NewsDetailScreen(),
       },
@@ -57,29 +58,24 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Latest News'),
-      ),
-      body: GridView(
-        padding: const EdgeInsets.all(25),
+    return GridView(
+      padding: const EdgeInsets.all(25),
 
-        /// the first page displays CategoryItem controller
-        children: dummyCategories
-            .map(
-              (catData) => CategoryItem(
-                id: catData.id,
-                title: catData.title,
-                color: catData.color,
-              ),
-            )
-            .toList(),
-        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200,
-          childAspectRatio: 1.5,
-          crossAxisSpacing: 30,
-          mainAxisSpacing: 30,
-        ),
+      /// the first page displays CategoryItem controller
+      children: dummyCategories
+          .map(
+            (catData) => CategoryItem(
+              id: catData.id,
+              title: catData.title,
+              color: catData.color,
+            ),
+          )
+          .toList(),
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        childAspectRatio: 1.5,
+        crossAxisSpacing: 30,
+        mainAxisSpacing: 30,
       ),
     );
   }
