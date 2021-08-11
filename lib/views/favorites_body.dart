@@ -11,7 +11,7 @@ class FavoritesBody extends StatelessWidget {
         height: 300.0,
         width: 300.0,
         child: Text(
-          'Favorites Data just for Display',
+          'Favorites Tab will Display a different View!',
           style: TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.bold,

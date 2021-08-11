@@ -17,7 +17,7 @@ class _TabsViewState extends State<TabsView> {
       // initialIndex: 0,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('News'),
+          title: const Text('Latest News'),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
